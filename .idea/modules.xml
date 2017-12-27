@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/KotlinUtils.iml" filepath="$PROJECT_DIR$/KotlinUtils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kotlin-utils/kotlin-utils.iml" filepath="$PROJECT_DIR$/kotlin-utils/kotlin-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kotlin-utils-recyclerview/kotlin-utils-recyclerview.iml" filepath="$PROJECT_DIR$/kotlin-utils-recyclerview/kotlin-utils-recyclerview.iml" />
+    </modules>
+  </component>
+</project>
