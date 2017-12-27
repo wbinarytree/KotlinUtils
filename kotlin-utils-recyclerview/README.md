@@ -75,8 +75,8 @@ implementation 'com.github.wbinarytree:kotlin-utils-recyclerview:0.1'
 License
 =======
 
-    Copyright 2017 WBinaryTree (Yaoda WANG)
-
+    Copyright 2017 WBinaryTree (Yaoda WANG)
+    
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
