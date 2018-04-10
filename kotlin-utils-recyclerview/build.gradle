@@ -8,6 +8,9 @@ apply plugin: 'com.github.dcendents.android-maven'
 
 apply plugin: 'com.jfrog.bintray'
 
+apply plugin: 'org.jetbrains.dokka'
+
+
 version = '0.1'
 
 androidExtensions {
@@ -35,6 +38,11 @@ android {
         }
     }
 
+}
+
+dokka {
+    outputFormat = 'html'
+    outputDirectory = "$buildDir/javadoc"
 }
 
 dependencies {

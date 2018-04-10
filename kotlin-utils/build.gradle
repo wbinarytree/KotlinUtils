@@ -1,8 +1,29 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'maven'
 
 
+//dependencies {
+//    deployerJars "org.apache.maven.wagon:wagon-http:2.2"
+//}
+
+uploadArchives {
+    repositories.mavenDeployer {
+//        configuration = configurations.deployerJars
+//        url "http://test.airweb.fr:8081/repository/maven-airweb-releases"
+
+        repository(url: "http://test.airweb.fr:8081/repository/maven-airweb-releases/") {
+            authentication(userName: "admin", password: "admin123")
+            pom.groupId = "fr.airweb"
+            pom.artifactId = "kotlin-utils"
+            pom.version = '0.1.2'
+            pom.packaging='aar'
+
+        }
+    }
+
+}
 androidExtensions {
     experimental = true
 }

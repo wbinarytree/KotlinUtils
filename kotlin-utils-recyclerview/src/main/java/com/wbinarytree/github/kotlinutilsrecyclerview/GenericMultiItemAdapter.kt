@@ -17,7 +17,7 @@ import android.view.ViewGroup
  **
  *  @param list the item list
  **/
-class GenericMultiItemAdapter<T>(val list: MutableList<ViewModel<T>>) : Adapter<InnerHolder>() {
+class GenericMultiItemAdapter<T>(private var list: MutableList<ViewModel<T>>) : Adapter<InnerHolder>() {
     private val typeHolder = SparseIntArray()
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): InnerHolder {
         val itemView = LayoutInflater.from(parent?.context)?.inflate(typeHolder[viewType],
@@ -44,6 +44,19 @@ class GenericMultiItemAdapter<T>(val list: MutableList<ViewModel<T>>) : Adapter<
             typeHolder.put(type, list[position].resId)
         }
         return type
+    }
+
+    /**
+     * update the list of adapter
+     * @param notify indicate whether call the [notifyDataSetChanged] or not
+     *
+     * @param list  the new list for adapter
+     * */
+    fun update(list: MutableList<ViewModel<T>>, notify: Boolean = true) {
+        this.list = list
+        if (notify) {
+            notifyDataSetChanged()
+        }
     }
 }
 
