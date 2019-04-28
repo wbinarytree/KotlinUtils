@@ -13,10 +13,11 @@ uploadArchives {
 //        configuration = configurations.deployerJars
 //        url "http://test.airweb.fr:8081/repository/maven-airweb-releases"
 
-        repository(url: "http://test.airweb.fr:8081/repository/maven-airweb-releases/") {
-            authentication(userName: "admin", password: "admin123")
+          repository(url: localProperties.getProperty("maven.repository")) {
+            def login = localProperties.getProperty("maven.login")
+            def password = localProperties.getProperty("maven.password")
+            authentication(userName: login, password: password)
             pom.groupId = "fr.airweb"
-            pom.artifactId = "kotlin-utils"
             pom.version = '0.1.2'
             pom.packaging='aar'
 
